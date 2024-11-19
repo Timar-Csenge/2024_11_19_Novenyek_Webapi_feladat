@@ -9,9 +9,11 @@ plants = [
 
 @app.route('/', methods=["GET"])
 def index():
-        plants={
-        return render_template('tabla.html', plants=plants)
-        }
+    return render_template('index.html')
+
+@app.route('/tabla')
+def tabla():
+    return render_template('tabla.html', plants=plants)
     print(plants)
 
 

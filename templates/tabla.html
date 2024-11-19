@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Táblázat</title>
 </head>
 <body>
-{% for plants in plants %}
+<table>
+    <tr>
+        <td>
+            Név
+        </td>
+
+        <td>
+            Típus
+        </td>
+
+        <td>
+            jellemző
+        </td>
+    </tr>
+
+{% for plants in index %}
 <tr>
     <td>
         {{ plants}}
     </td>
 </tr>
+</table>
 {% endfor %}
 
 <a href="C:\Users\timarcsenge\Documents\GitHub\2024_11_19_Novenyek_Webapi_feladat\templates\index.html">Vissza a főoldalra</a>
