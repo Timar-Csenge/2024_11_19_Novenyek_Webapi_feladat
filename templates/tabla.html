@@ -3,34 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Táblázat</title>
 </head>
 <body>
 <table>
     <tr>
-        <td>
-            Név
-        </td>
-
-        <td>
-            Típus
-        </td>
-
-        <td>
-            jellemző
-        </td>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>jellemző</th>
     </tr>
-
-{% for plants in index %}
+{% for plant in plants %}
 <tr>
-    <td>
-        {{ plants}}
-    </td>
+    <td>{{ plant.name }}</td>
+    <td>{{ plant.type }}</td>
+    <td>{{ plant.feature}}</td>
 </tr>
-</table>
 {% endfor %}
+</table>
 
-<a href="C:\Users\timarcsenge\Documents\GitHub\2024_11_19_Novenyek_Webapi_feladat\templates\index.html">Vissza a főoldalra</a>
+<br>
+<br>
+<a href ="{{ url_for('index') }}">Vissza a főoldalra</a>
 
 </body>
 </html>
