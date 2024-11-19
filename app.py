@@ -13,6 +13,7 @@ def index():
 
 @app.route('/tabla')
 def tabla():
+
     return render_template('tabla.html', plants=plants)
     print(plants)
 
